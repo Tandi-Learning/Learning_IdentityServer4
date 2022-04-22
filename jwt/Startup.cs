@@ -103,9 +103,10 @@ namespace jwt
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseAuthentication();
-
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints => {
                 endpoints.MapDefaultControllerRoute();
